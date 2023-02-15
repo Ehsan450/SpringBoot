@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SpringBoot Project
+    </title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>first_name</th>
+        <th>last_name</th>
+        <th>Salary</th>
+        <th>dateOfBirth</th>
+        <th>joinningDate</th>
+
+    </tr>
+
+    </thead>
+    <tbody th:each="emp : ${employees}">
+    <tr>
+        <td th:text="${emp.id}"></td>
+        <td th:text="${emp.first_name}"></td>
+        <td th:text="${emp.last_name}"></td>
+        <td th:text="${emp.salary}"></td>
+        <td th:text="${emp.dateOfBirth}"></td>
+        <td th:text="${emp.joinningDate}"></td>
+        <td>
+            <a th:href="@{'/employees/'+${emp.id}}" target="_self">
+                Visit
+            </a>
+        </td>
+    </tr>
+
+    </tbody>
+
+</table>
+
+</body>
+</html>

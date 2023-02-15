@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SpringBoot Project</title>
+</head>
+
+<body>
+<div>ID
+    <p th:text="${employee.id}"></p>
+</div>
+<div>FirstName
+    <p th:text="${employee.first_name}">
+
+    </p>
+</div>
+<div>LastName
+    <p th:text="${employee.last_name}">
+
+    </p>
+</div>
+<div>Salary
+    <p th:text="${employee.salary}">
+
+    </p>
+</div>
+<div>dateOfBirth
+    <p th:text="${employee.dateOfBirth}">
+
+    </p>
+</div>
+<div>joinningDate
+    <p th:text="${employee.joinningDate}">
+
+    </p>
+    <div th:if="${empty}">
+        <h3 th:text="${empty}"></h3>
+
+    </div>
+</div>
+
+
+</body>
+</html>
